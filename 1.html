@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="header0">
+            <h1>Create Account</h1>
+            <p>Please fill in the details below</p>
+        </div>
+        
+        <form class="reg_form" action="https://jsonplaceholder.typicode.com/users" method="post">
+            <div class="form-group">
+                <label for="fname0">First Name</label>
+                <input type="text" name="fname" id="fname0" placeholder="e.g. John" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" placeholder="e.g. Doe" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone_number">Phone Number</label>
+                <input type="tel" name="phone_number" id="phone_number" placeholder="011223344" pattern="^0[1-9][0-9]{7,8}$" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="john@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="••••••••" required minlength="4">
+            </div>
+
+            <div class="form-group"> 
+                <label for="conf_passwd">Confirm Password</label> 
+                <input type="password" name="conf_passwd" id="conf_passwd" placeholder="••••••••" required minlength="4">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="nonbinary">Non-Binary</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="hobbies">Hobbies</label>
+                    <select name="hobbies" id="hobbies" required>
+                        <option value="" disabled selected>Select hobby</option>
+                        <option value="music">Music</option>
+                        <option value="sports">Sports</option>
+                        <option value="travel">Travel</option>
+                        <option value="movies">Movies</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" id="birthday" required>
+            </div>
+
+            <div class="form-group">
+                <label for="profile_pic">Profile Picture</label>
+                <input type="file" id="profile_pic" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea name="bio" id="bio" placeholder="Tell us about yourself..." rows="4">I don't want to say anything.</textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Register Now</button>
+            </div>   
+        </form>
+    </div>
+</body>
+</html>
